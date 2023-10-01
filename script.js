@@ -13,12 +13,12 @@ import {
 //
 
 export const getNumbersHigherThan3 = numbersArray.filter(function (number){
-    return number
+    return number > 30
 })
 
-export const getOnlyTrueValues = booleansArray.filter(boolean => boolean || !boolean)
+export const getOnlyTrueValues = booleansArray.filter(boolean => boolean)
 
-export const hunterDataEnhanced = hunterData.filter(hunter => hunter)
+export const hunterDataFiltered = hunterData.filter(hunter => hunter.stats.strength)
 
 
 
@@ -55,4 +55,4 @@ export const hunterDataEnhanced = hunterData.filter(hunter => hunter)
 
 createList(getNumbersHigherThan3, numbersContainer);
 createList(getOnlyTrueValues, booleansContainer);
-createGallery(hunterDataEnhanced, hunterGalleryContainer);
+createGallery(hunterDataFiltered, hunterGalleryContainer);
